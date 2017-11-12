@@ -1,4 +1,6 @@
 ﻿using System;
+using ChainAsAService.Host;
+using ChainAsAService.Components;
 
 namespace ChainAsAService.Host
 {
@@ -6,7 +8,11 @@ namespace ChainAsAService.Host
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Create chain as a service
+            var chain = new ServiceFactory().Create();
+
+            // Start service
+            chain.Process();
         }
     }
 }
