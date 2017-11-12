@@ -3,15 +3,16 @@ using ChainAsAService.Core;
 
 namespace ChainAsAService.Components
 {
+    ///<summary>
+    /// Hello world chain link
+    ///</summary>
     public class HelloWorldHandler : Handler
     {
-        public HelloWorldHandler(Handler successor) : base(successor)
-        {
-        }
-
+        ///<inheritdoc />
         public override void Process()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Hello world!");
+            ProccedNext();
         }
     }
 }

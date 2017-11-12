@@ -10,12 +10,12 @@ namespace ChainAsAService.Core
         ///<summarize>
         /// Successor of current handler
         ///</summarize>
-        private readonly Handler _successor;
+        private Handler _successor;
 
         ///<summary>
-        /// Constructor with successor initializer
+        /// Set handler successor
         ///</summary>
-        public Handler(Handler successor)
+        public void SetSuccessor(Handler successor)
         {
             _successor = successor;
         }

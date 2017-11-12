@@ -1,17 +1,19 @@
 ﻿using System;
 using ChainAsAService.Core;
+using System.Threading;
 
 namespace ChainAsAService.Components
 {
+    ///<summary>
+    /// Waiter chain link. Sleeps threar for a 1 second
+    ///</summary>
     public class WaiterHandler : Handler
     {
-        public WaiterHandler(Handler successor) : base(successor)
-        {
-        }
-
+        ///<inheritdoc />
         public override void Process()
         {
-            throw new NotImplementedException();
+            Thread.Sleep(1000);
+            ProccedNext();
         }
     }
 }
