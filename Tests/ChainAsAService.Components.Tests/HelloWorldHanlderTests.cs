@@ -1,7 +1,6 @@
 using System;
+using System.IO;
 using Xunit;
-using ChainAsAService.Components;
-using ChainAsAService.Components.Tests.Infrastructure;
 
 namespace ChainAsAService.Components.Tests
 {
@@ -18,11 +17,12 @@ namespace ChainAsAService.Components.Tests
             var currentConsoleOut = Console.Out;
             var expectedString = $"Hello world!{Environment.NewLine}";
 
-            using (var fakeConsole = new FakeConsole())
+            using (var sw = new StringWriter())
             {
+                Console.SetOut(sw);
                 _sut.Process();
 
-                Assert.Equal(expectedString, fakeConsole.Output);
+                Assert.Equal(expectedString, sw.ToString());
             }
         }
     }
