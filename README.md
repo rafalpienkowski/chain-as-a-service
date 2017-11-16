@@ -51,3 +51,7 @@ Current date and time: 16.11.2017 17:18:16
 I hope this example will encourage you to more frequent use chain of responsibility design pattern. I would be honored if you will build a service is way I presented. 
 
 I hope you enjoy this article. Your feedback will be extremely valuable to me.
+
+### Links:
+---
+- [Chain icons](http://clipart-library.com/clipart/pi7rL4AMT.htm)
