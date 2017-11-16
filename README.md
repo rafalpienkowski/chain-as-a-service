@@ -32,12 +32,11 @@ I've implemented 3 handlers:
     - which freezes  application for one second
 
 I've created a [ServiceFactory](https://github.com/rafalpienkowski/chain-as-a-service/blob/master/ChainAsAService.Components/ServiceFactory.cs) class which implements [IHandlerFactory](https://github.com/rafalpienkowski/chain-as-a-service/blob/master/ChainAsAService.Core/IHandlerFactory.cs) interface and produces my simple service. My service consist of:
-- HelloWorldHandler
-- WaiterHandler
-- DateTimeHandler
-- WaiterHandler
 
-and simple output looks like:
+![Service](https://raw.githubusercontent.com/rafalpienkowski/resources/master/chain-as-a-service/service.png)
+
+
+and output from application looks like:
 
 ```sh
 Hello world!
